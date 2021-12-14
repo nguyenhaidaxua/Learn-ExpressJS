@@ -1,5 +1,16 @@
-h1 Create User 
-form(action="/users/create" method="POST")
-    label(for="input") Name 
-    input(type="text" id='input' name="name" )
-    button(type='submit') Submit
+extend ../layout/common
+block content
+    h1 Create User 
+    form(action="/users/create" method="POST")
+        if errors
+            each error of errors
+                .alert.alert-danger= error
+        .form-group
+            label(for="name") Name 
+            input.form-control(type="text" id='name' name="name" value=values ? values.name : ""  )
+     
+        .form-group
+            label(for="phone") Phone 
+            input.form-control(type="text" id='phone' name="phone" value=values ? values.phone : ""  )
+        button.btn.btn-primary.mt-2(type='submit') Create
+
