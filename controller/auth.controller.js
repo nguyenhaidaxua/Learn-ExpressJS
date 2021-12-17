@@ -39,7 +39,7 @@ module.exports.postLogin = (req,res) => {
     res.cookie('userId', user.id,{
         signed: true
     })
-    res.locals.user = user
+    
     res.redirect('/users')
 
 }
