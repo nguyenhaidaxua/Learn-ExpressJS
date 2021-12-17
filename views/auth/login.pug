@@ -1,0 +1,16 @@
+extend ../layout/common
+block content
+    h1 LOGIN
+    form(method="POST")
+        if errors
+            each error of errors
+                .alert.alert-danger= error
+        .form-group
+            label(for="email") Email 
+            input.form-control(type="text" id='email' name="email" value=values ? values.email : ""  )
+     
+        .form-group
+            label(for="password") Password 
+            input.form-control(type="text" id='password' name="password" value=values ? values.password : ""  )
+        button.btn.btn-primary.mt-2(type='submit') Login
+

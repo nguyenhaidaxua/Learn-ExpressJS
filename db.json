@@ -1,29 +1,16 @@
 {
   "users": [
     {
-      "name": "dsa",
-      "phone": "dsa",
-      "id": "2_sz7HH5R"
-    },
-    {
       "name": "Hải",
       "phone": "1012481790",
       "id": "ug61RgVmc"
     },
     {
-      "name": "",
-      "phone": "",
-      "id": "UYNf5q9mh"
-    },
-    {
-      "name": "das",
-      "phone": "",
-      "id": "Z17tTZ511"
-    },
-    {
-      "name": "das",
-      "phone": "s",
-      "id": "ZV-gGoHsF"
+      "name": "fds",
+      "phone": "123",
+      "email": "123@456.com",
+      "password": "123456",
+      "id": "YWngH6DI3"
     }
   ]
 }
