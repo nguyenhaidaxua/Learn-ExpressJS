@@ -1,4 +1,6 @@
+const md5 = require('md5');
 const { render } = require('pug')
+
 const db = require('../db')
 module.exports.login = (req,res) => {
     res.render('auth/login')
@@ -20,7 +22,9 @@ module.exports.postLogin = (req,res) => {
        })
         return
     }
-    if (user.password !== userPassword){
+    const hashedPaswords = md5(userPassword)
+
+    if (user.password !== hashedPaswords){
         res.render('auth/login',{
            errors: [
                "Password is wrong",
@@ -31,9 +35,11 @@ module.exports.postLogin = (req,res) => {
         return
         
     }
-    
-    res.cookie('userId', user.id)
-    
+
+    res.cookie('userId', user.id,{
+        signed: true
+    })
+    res.locals.user = user
     res.redirect('/users')
 
 }

@@ -17,6 +17,7 @@ html
                             a.nav-link.active(aria-current='page' href='/users/create') Create User
                         li.nav-item
                             a.nav-link.active(aria-current='page' href='/auth/login') Login
-
+                if user 
+                    p.text-white= user.name
     .container.pt-5
         block content
