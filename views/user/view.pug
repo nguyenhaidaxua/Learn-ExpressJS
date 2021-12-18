@@ -2,5 +2,12 @@ extend ../layout/common
 block content
     h1 User Detail 
         br
+        if user.avatar
+            img(src=user.avatar)
+        else
+            img(src='https://www.w3schools.com/howto/img_avatar.png')
+        br
         b Name 
-        p= user.name 
+        p= user.name
+
+        

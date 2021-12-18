@@ -21,7 +21,8 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser(process.env.SESSION_SECRET))
 
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
+
 
 app.get('/', (req,res) => {
     res.render('index')
@@ -29,7 +30,7 @@ app.get('/', (req,res) => {
 
 app.use('/users', authMiddleware.authRequire, userRoute)
 app.use('/auth', authRoute)
-app.use('/products', productRoute)
+app.use('/products',authMiddleware.authRequire, productRoute)
 
 app.listen(3000, ()=>{
     console.log('Server listening on port '+port)

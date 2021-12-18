@@ -9,12 +9,18 @@ block content
             button(type='submit' class="btn btn-primary ml-2") Submit
     table.table
         tr
+            th Avatar
             th Name 
             th Phone 
             th Action 
 
         each user in users
             tr 
+                td
+                    if user.avatar
+                        img.avatar(src=user.avatar)
+                    else
+                        img.avatar(src='https://www.w3schools.com/howto/img_avatar.png')
                 td= user.name 
                 td= user.phone
                 td
