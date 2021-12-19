@@ -19,6 +19,9 @@ html
                         li.nav-item
                             a.nav-link.active(aria-current='page' href='/products') Products
                         li.nav-item
+                            a.nav-link.active(aria-current='page' href='/cart') Cart
+                                span.badge.bg-secondary.ms-1= items
+                        li.nav-item
                             a.nav-link.active(aria-current='page' href='/auth/login') Login
                 if user 
                     p.text-white= user.name
