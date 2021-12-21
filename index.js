@@ -4,6 +4,9 @@ const express = require('express')
 const { render } = require('pug')
 const bodyParser = require('body-parser') 
 const cookieParser = require('cookie-parser')
+const mongoose = require('mongoose')
+
+mongoose.connect(process.env.MONGO_URL)
 
 const authRoute = require('./routes/auth.route')
 const userRoute = require('./routes/user.route')

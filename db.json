@@ -650,15 +650,5 @@
       "img": "http://dummyimage.com/196x100.png/5fa2dd/ffffff"
     }
   ],
-  "session": [
-    {
-      "id": "ImnxfIlen",
-      "cart": {
-        "64231c58-8d4b-42fa-b566-433eaa2002da": 2,
-        "e0277e41-4056-44df-948b-5994bd67596a": 3,
-        "fc8457dc-b207-441c-afe6-8a00f708c1fe": 1,
-        "cd990129-f6a9-404e-84e6-34c376d9f7cd": 1
-      }
-    }
-  ]
+  "session": []
 }
